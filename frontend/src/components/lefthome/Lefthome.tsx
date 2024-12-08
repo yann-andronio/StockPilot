@@ -1,4 +1,5 @@
 import { Fragment } from "react/jsx-runtime";
+import Dashboard from "../dashboard/Dashboard";
 
 const Lefthome: React.FC = () => {
   return (
@@ -7,6 +8,7 @@ const Lefthome: React.FC = () => {
         <p  className="h-8 w-8 rounded-full bg-yellow-300" ></p>
         <h1 className=" text-xl font-semibold text-white">StockPilot</h1>
       </div>
+      <Dashboard/>
     </Fragment>
   );
 };

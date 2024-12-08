@@ -1,0 +1,17 @@
+.link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-decoration: none; 
+    font-size: 0.875rem; 
+  }
+
+.active {
+    color: #9f7126; 
+    font-weight: bold; 
+  }
+  
+  .inactive {
+    color: whitesmoke;
+  }
+  

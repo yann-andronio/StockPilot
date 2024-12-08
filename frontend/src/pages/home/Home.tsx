@@ -5,10 +5,10 @@ const Home :React.FC = ()=>{
 return (
     <Fragment>
         <div className="parents flex h-screen">
-        <div className="Left bg-red-500 w-[20%] p-7  " >
+        <div className="Left bg-[#4B0082]  p-7  " >
             <Lefthome/>
         </div>
-        <div className="Rigth bg-blue-400 w-[80%] " >Rigth</div>
+        <div className="Rigth bg-blue-400 w-[100%] " >Rigth</div>
         </div>
        
     </Fragment>
