@@ -6,7 +6,7 @@ interface ActiveLinkState {
 }
 
 const initialState: ActiveLinkState = {
-  activeName: "Accueil", 
+  activeName: "Accueil",
   closeBar: false,
 };
 
@@ -23,5 +23,5 @@ const activeLinkSlice = createSlice({
   },
 });
 
-export const { setActiveName , toggleCloseBar } = activeLinkSlice.actions;
+export const { setActiveName, toggleCloseBar } = activeLinkSlice.actions;
 export default activeLinkSlice.reducer;

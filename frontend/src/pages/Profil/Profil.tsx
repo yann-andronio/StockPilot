@@ -1,22 +1,35 @@
-import { Fragment } from "react/jsx-runtime"
-import Left from "../../components/left/Left"
-import Navbar from "../../components/navbar/Navbar"
+import { Fragment } from "react/jsx-runtime";
+import Left from "../../components/left/Left";
+import Rigthhome from "../../components/rigthhome/Rigthhome";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/Store";
 
-const Profil :React.FC = ()=>{
-return (
+const Profil: React.FC = () => {
+  const closeBar = useSelector((state: RootState) => state.activeLink.closeBar);
+
+  return (
     <Fragment>
-        <div className="parents flex h-screen">
-        <div className="Left bg-[#4B0082]  p-7  " >
-            <Left/>
+      <div className="parents flex h-screen">
+        <div
+          className={`bg-[#4B0082] fixed top-0 left-0 min-h-screen flex flex-col items-center p-7  
+            ${
+              closeBar ? "w-[5rem]" : "w-[16rem]"
+            } transition-width  duration-[600ms] ease-in-out`}
+        >
+          <Left />
         </div>
 
-        <div className="Rigth bg-blue-400 w-[100%] " >profil ty
-            <Navbar/>
+        <div
+          className={`Rigth bg-[#E6E6FA] w-[100%] 
+            ${
+              closeBar ? "ml-16" : "ml-60"
+            } transition-all duration-[600ms] ease-in-out`}
+        >
+          <Rigthhome />
         </div>
-        </div>
-       
+      </div>
     </Fragment>
-)
-}
+  );
+};
 
-export default Profil
+export default Profil;

@@ -61,14 +61,14 @@ const Dashboard: FC = () => {
               to={item.path}
               className={(nav) =>
                 `${nav.isActive ? s.active : s.inactive} ` +
-                `${closeBar ? s.linkclose : s.link} `
+                `${closeBar ? s.linkclose : s.link}  `
               }
               onClick={() => dispatch(setActiveName(item.name))}
             >
               {item.icon}
               <span
                 style={{ transitionDelay: `${index * 1}00ms` }}
-                className={` font-normal transition-all duration-500 absolute left-12 ${closeBar && 'opacity-0 translate-x-10 '} `}
+                className={` font-normal transition-all duration-500 absolute left-12 ${closeBar && 'opacity-0 translate-x-12 '} `}
               >
                 {item.name}
               </span>
