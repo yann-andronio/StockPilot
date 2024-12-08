@@ -1,25 +1,30 @@
 .link {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    text-decoration: none; 
-    font-size: 0.875rem; 
-    padding: 1rem 2rem 1rem 2rem ;
-    border-radius: 3px;
-    transition: 0.1s;
-  }
-
-  .link:hover{
-    background-color: #ECF0F133;
-    transition: 0.1;
-  }
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem; 
+  color: #ECF0F1; 
+  padding: 6px 70px 6px 10px; 
+  border-radius: 6px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.inactive {
+  color: #B0BEC5; 
+}
+.link:hover {
+  background-color: #ECF0F133; 
+  color: #ECF0F1; 
+}
 
 .active {
-    color: #9f7126; 
-    font-weight: bold; 
-  }
-  
-  .inactive {
-    color: whitesmoke;
-  }
-  
+  font-weight: bold; 
+  background-color: #ECF0F133;
+  color: #FFFFFF; 
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.active:hover {
+  background-color: #D3D3D366; 
+  color: #FFFFFF; 
+}

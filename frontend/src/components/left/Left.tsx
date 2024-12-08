@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import Dashboard from "../dashboard/Dashboard";
 
-const Lefthome: React.FC = () => {
+const Left: React.FC = () => {
   return (
     <Fragment>
       <div className="logo flex items-center gap-3 pb-8 border-b-2  border-[#ffffff] ">
@@ -13,4 +13,4 @@ const Lefthome: React.FC = () => {
   );
 };
 
-export default Lefthome;
+export default Left;

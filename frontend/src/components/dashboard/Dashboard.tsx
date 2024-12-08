@@ -13,29 +13,29 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    path: "/home",
+    path: "/",
     name: "Accueil",
-    icon: <RxDashboard size={25} color="white" />,
+    icon: <RxDashboard size={25}  />,
   },
   {
     path: "/profile",
     name: "Profil",
-    icon: <FaUser size={25} color="white" />,
+    icon: <FaUser size={25}  />,
   },
   {
     path: "/clients",
     name: "Clients",
-    icon: <FaUsers size={25} color="white" />,
+    icon: <FaUsers size={25}  />,
   },
   {
     path: "/products",
     name: "Produits",
-    icon: <FaBoxOpen size={25} color="white" />,
+    icon: <FaBoxOpen size={25}  />,
   },
   {
     path: "/orders",
     name: "Commandes",
-    icon: <FaShoppingCart size={25} color="white" />,
+    icon: <FaShoppingCart size={25}  />,
   },
 ];
 
@@ -48,11 +48,11 @@ const Dashboard: FC = () => {
             <NavLink
               to={item.path}
               className={(nav) =>
-                `${nav.isActive ? s.active : s.Non_active} ${s.link}`
+                `${nav.isActive ? s.active : s.inactive} ${s.link}`
               }
             >
               {item.icon}
-              <span className="font-normal text-white">{item.name}</span>
+              <span className="font-normal ">{item.name}</span>
             </NavLink>
           </li>
         ))}
