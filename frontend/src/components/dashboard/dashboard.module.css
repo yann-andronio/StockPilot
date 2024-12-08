@@ -4,7 +4,7 @@
   gap: 1rem;
   font-size: 0.875rem; 
   color: #ECF0F1; 
-  padding: 6px 70px 6px 10px; 
+  padding: 6px 160px 6px 10px; 
   border-radius: 6px; 
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
@@ -28,3 +28,22 @@
   background-color: #D3D3D366; 
   color: #FFFFFF; 
 }
+
+/* en burgerrrr */
+
+.linkclose{
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem; 
+  color: #ECF0F1; 
+  padding: 6px 10px 6px 10px; 
+  border-radius: 6px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.linkclose:hover {
+  background-color: #ECF0F133; 
+  color: #ECF0F1; 
+}
+
+
