@@ -1,8 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import Dashboard from "../dashboard/Dashboard";
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/Store";
-
+import { RootState } from "../../redux/Store";;
 const Lefthome: React.FC = () => {
   const closeBar = useSelector(
     (state: RootState) => state.activeLink.closeBar
