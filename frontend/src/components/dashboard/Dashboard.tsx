@@ -2,6 +2,9 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { FaUser, FaUsers, FaBoxOpen, FaShoppingCart } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
+import {  useDispatch } from 'react-redux'
+import { setActiveName } from "../../redux/slice/ActiveLinkSlice"; 
+
 
 import s from "./Dashboard.module.css";
 
@@ -39,7 +42,12 @@ const navItems: NavItem[] = [
   },
 ];
 
+
+
 const Dashboard: FC = () => {
+  const dispatch = useDispatch();
+
+
   return (
     <nav className={` ${s.navbar} `}>
       <ul className={`${s.navlist} flex flex-col gap-3 mt-8`}>
@@ -50,6 +58,7 @@ const Dashboard: FC = () => {
               className={(nav) =>
                 `${nav.isActive ? s.active : s.inactive} ${s.link}`
               }
+              onClick={() => dispatch(setActiveName(item.name))}
             >
               {item.icon}
               <span className="font-normal ">{item.name}</span>
