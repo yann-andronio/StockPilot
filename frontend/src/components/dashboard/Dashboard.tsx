@@ -42,7 +42,7 @@ const navItems: NavItem[] = [
 const Dashboard: FC = () => {
   return (
     <nav className={` ${s.navbar} `}>
-      <ul className={`${s.navlist} flex flex-col gap-8 p-8`}>
+      <ul className={`${s.navlist} flex flex-col gap-3 mt-8`}>
         {navItems.map((item, index) => (
           <li key={index}>
             <NavLink
