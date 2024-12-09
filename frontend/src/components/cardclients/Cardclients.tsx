@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import { FaPhone, FaMapMarkerAlt, FaEdit, FaTrash } from "react-icons/fa";
 
-const Cardclients: React.FC<{ searchClients: string }> = ({
+const Cardclients: React.FC<{ searchClients: string; Modifmodule: boolean ;  setModifmodule: React.Dispatch<React.SetStateAction<boolean>>; }> = ({
   searchClients,
+  Modifmodule,
+  setModifmodule
 }) => {
   const [users] = useState([
     { name: "Yann Andronio", phone: "034 20 578 36", address: "Antananarivo" },
@@ -49,7 +51,7 @@ const Cardclients: React.FC<{ searchClients: string }> = ({
                 <span>{user.address}</span>
               </div>
               <div className="flex gap-4 mt-auto">
-                <button className="p-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300">
+                <button className="p-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300"  onClick={()=> setModifmodule(!Modifmodule)}>
                   <FaEdit size={15} />
                 </button>
                 <button className="p-2 text-white bg-red-500 rounded-lg hover:bg-red-600 transition duration-300">

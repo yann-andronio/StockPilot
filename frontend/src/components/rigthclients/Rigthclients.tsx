@@ -3,12 +3,14 @@ import Navbar from "../navbar/Navbar";
 import Searchlistclients from "../searrchlistclients/Searchlistclients";
 import Cardclients from "../cardclients/Cardclients";
 import { useState } from "react";
+import Modifclients from "../modifclients/Modifclients";
 
 const Rigthclients: React.FC = () => {
   const [searchClients, setSearchClients] = useState("");
+  const [modifmodule, setModifmodule] = useState(false);
 
   const handleSearchClients = (dataclients: string) => {
-    setSearchClients(dataclients); 
+    setSearchClients(dataclients);
   };
 
   return (
@@ -20,7 +22,15 @@ const Rigthclients: React.FC = () => {
         <Searchlistclients onSearch={handleSearchClients} />
 
         <div className="cardclient mt-8">
-          <Cardclients searchClients={searchClients} />
+          <Cardclients
+            searchClients={searchClients}
+            Modifmodule={modifmodule}
+            setModifmodule={setModifmodule}
+          />
+        </div>
+
+        <div className="modifclients">
+          {modifmodule && <Modifclients setModifmodule={setModifmodule} />}
         </div>
       </main>
     </Fragment>
