@@ -1,8 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
 import Left from "../../components/left/Left";
-import Rigthhome from "../../components/rigthhome/Rigthhome";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/Store";
+import Rigthprofil from "../../components/rigthprofil/Rigthprofil";
 
 const Profil: React.FC = () => {
   const closeBar = useSelector((state: RootState) => state.activeLink.closeBar);
@@ -25,7 +25,7 @@ const Profil: React.FC = () => {
               closeBar ? "ml-16" : "ml-60"
             } transition-all duration-[600ms] ease-in-out`}
         >
-          <Rigthhome />
+          <Rigthprofil />
         </div>
       </div>
     </Fragment>
