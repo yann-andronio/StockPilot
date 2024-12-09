@@ -9,13 +9,13 @@ const Rigthprofil: React.FC = () => {
       <div className="navbar w-full">
         <Navbar />
       </div>
-      <main className="p-8 ">
-      <div className="editprofil">
-        <Editingprofil/>
-      </div>
+      <main className="p-8 flex justify-center  gap-8 ">
+        <div className="editprofil">
+          <Editingprofil />
+        </div>
 
-        <div className="infoperso">
-            <Formulairedeprofil />
+        <div className="infoperso w-3/5">
+          <Formulairedeprofil />
         </div>
       </main>
     </Fragment>
