@@ -66,7 +66,7 @@ const Tablederniercmd: FC = () => {
                   <td className="px-6 py-4">
                     <button
                       onClick={() => handleDetails(index)}
-                      className="text-white px-10 py-2 rounded-lg bg-[#8E44AD]"
+                      className="text-white px-10 py-2 rounded-md bg-[#8E44AD]"
                     >
                       Détails
                     </button>
