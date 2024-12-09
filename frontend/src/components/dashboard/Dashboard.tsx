@@ -38,7 +38,7 @@ const navItems: NavItem[] = [
     icon: <FaBoxOpen size={25} />,
   },
   {
-    path: "/orders",
+    path: "/commande",
     name: "Commandes",
     icon: <FaShoppingCart size={25} />,
   },
