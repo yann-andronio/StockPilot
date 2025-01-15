@@ -18,7 +18,7 @@ interface User {
 
 const Register: React.FC = () => {
   const [dataUser, setDataUser] = useState<User[]>([]);
-  const notify = () => toast("Wow so easy!");
+  const notify = () => toast("utilisateur poster");
 
   const ValidationSchema = yup.object({
     name: yup.string().required("Donnez votre nom"),
@@ -66,7 +66,7 @@ const Register: React.FC = () => {
   return (
     <Fragment>
       <h1 className="text-center text-4xl font-bold text-gray-800 my-8">
-        Page de Connexion
+        Page d'inscription
       </h1>
 
       <form

@@ -1,10 +1,12 @@
 import { Fragment, useState } from "react";
+import Addcategoriemod from "../addcategoriemodule/Addcategoriemod";
 import Navbar from "../navbar/Navbar";
 import Rp1 from "../rp1/Rp1";
 import Rp2 from "../rp2/Rp2";
 
 const Rigthproduct: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Catégorie");
+  const [addcategoriemodule, setAddcategoriemodule] = useState(false);
 
   return (
     <Fragment>
@@ -36,7 +38,11 @@ const Rigthproduct: React.FC = () => {
         </div>
 
         <div className="rp1">
-          {activeTab === "Catégorie" ? <Rp1 /> : <Rp2 />}
+          {activeTab === "Catégorie" ? <Rp1 setAddcategoriemodule={setAddcategoriemodule}  /> : <Rp2 />}
+        </div>
+
+        <div className="modifclients">
+          {addcategoriemodule && <Addcategoriemod setAddcategoriemodule={setAddcategoriemodule} />}
         </div>
       </main>
     </Fragment>

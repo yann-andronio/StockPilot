@@ -2,7 +2,12 @@ import { Fragment } from "react";
 import { FaUserPlus, FaUsers } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 
-const Searchlistclients: React.FC<{ onSearch: (searchClients: string) => void }> = ({ onSearch }) => {
+type SearchlistclientsProps = {
+  onSearch: (searchClients: string) => void;
+  setAddclientmodule: (value: boolean) => void;
+};
+
+const Searchlistclients: React.FC<SearchlistclientsProps> = ({ onSearch, setAddclientmodule }) => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onSearch(event.target.value); 
@@ -16,7 +21,7 @@ const Searchlistclients: React.FC<{ onSearch: (searchClients: string) => void }>
             <FaUsers size={25} color="#8E44AD" />
           </div>
           <h1 className="text-lg sm:text-xl font-semibold text-gray-800">
-            Listes clients
+            Liste des clients
           </h1>
         </div>
 
@@ -31,9 +36,12 @@ const Searchlistclients: React.FC<{ onSearch: (searchClients: string) => void }>
             />
           </div>
 
-          <button className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300">
+          <button 
+            className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300"
+            onClick={() => setAddclientmodule(true)}
+          >
             <FaUserPlus size={20} />
-            Ajouter client
+            Ajouter un client
           </button>
         </div>
       </div>

@@ -1,10 +1,14 @@
-import { Fragment } from "react/jsx-runtime";
+import { Fragment } from "react";
 import { FaListAlt, FaPlusCircle } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 import Cardcatégorie from "../cardcategorie/Cardcatégorie";
 import { useState } from "react";
 
-const Rp1: React.FC = () => {
+type Rp1Props = {
+  setAddcategoriemodule: (value: boolean) => void;
+};
+
+const Rp1: React.FC<Rp1Props> = ({ setAddcategoriemodule }) => {
   const [searchCatégorie, setsearchCatégorie] = useState("");
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +39,10 @@ const Rp1: React.FC = () => {
               />
             </div>
 
-            <button className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300">
+            <button
+              className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300"
+              onClick={() => setAddcategoriemodule(true)}
+            >
               <FaPlusCircle size={20} />
               Ajouter catégorie
             </button>
