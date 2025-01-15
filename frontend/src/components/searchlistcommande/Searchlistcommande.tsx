@@ -1,11 +1,17 @@
 import { Fragment } from "react";
-import { FaUserPlus , FaShoppingCart } from "react-icons/fa";
+import { FaUserPlus, FaShoppingCart } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 
-const Searchlistcommande: React.FC<{ onSearch: (searchClients: string) => void }> = ({ onSearch }) => {
-
+type SearchlistclientsProps = {
+  onSearch: (searchCategorie: string) => void;
+  setAddcommandemodule: (value: boolean) => void;
+};
+const Searchlistcommande: React.FC<SearchlistclientsProps> = ({
+  onSearch,
+  setAddcommandemodule,
+}) => {
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onSearch(event.target.value); 
+    onSearch(event.target.value);
   };
 
   return (
@@ -27,12 +33,13 @@ const Searchlistcommande: React.FC<{ onSearch: (searchClients: string) => void }
               type="text"
               placeholder="Recherche..."
               className="bg-[#E6E6FA] focus:outline-none text-gray-700 w-full sm:w-auto"
-              onChange={handleSearchChange} 
-              
+              onChange={handleSearchChange}
             />
           </div>
 
-          <button className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300">
+          <button className="text-white bg-[#8E44AD] px-6 py-2 rounded-lg w-full sm:w-auto text-center font-medium flex items-center gap-2 hover:bg-[#732d91] transition duration-300"
+           onClick={() => setAddcommandemodule(true)}
+          >
             <FaUserPlus size={20} />
             Ajouter Commande
           </button>

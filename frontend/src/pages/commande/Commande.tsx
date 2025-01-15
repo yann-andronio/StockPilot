@@ -1,6 +1,5 @@
 import { Fragment } from "react/jsx-runtime";
 import Left from "../../components/left/Left";
-import Rigthhome from "../../components/rigthhome/Rigthhome";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/Store";
 import Rigthcommande from "../../components/rigthcommande/Rigthcommande";

@@ -21,7 +21,7 @@ const Rigthcommande: React.FC = () => {
       <main className="p-8">
         <Cardcommande />
         <div className="searchcommand p-3">
-          <Searchlistcommande onSearch={handleSearchCommande}  />
+          <Searchlistcommande onSearch={handleSearchCommande} setAddcommandemodule={setAddcommandemodule}   />
         </div>
         <div className="searchcommand mt-4 p-3">
           <Tablesearchcardcommand searchCommande={searchCommande} />
